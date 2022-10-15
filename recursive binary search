@@ -1,0 +1,49 @@
+// Binary searching recursive
+
+#include<iostream>
+#define MAX 100
+using namespace std;
+
+int binary_search(int t[], int k,int low, int high)
+{
+    int temp;
+    int pos=-1;
+    int n=(sizeof(t)/sizeof(t[0]));
+    // sorting the array in ascending order
+    for(i=0;i<n;i++)
+	{		
+		for(j=i+1;j<n;j++)
+		{
+			if(t[i]>t[j])
+			{
+				temp  =t[i];
+				t[i]=t[j];
+				t[j]=temp;
+			}
+		}
+	}
+	while(low<high)
+	{
+	    if(t[s/2]==k)
+	{
+	    pos=s/2;
+	    return pos;
+	}
+	else if (t[s/2]<k)
+	{
+	    return binary_search(t,k,(s/2)+1;high);
+	    
+	}
+	else
+	{
+	    return binary_search(t,k,low,(s/2)-1);
+	}
+	}
+	
+	
+}
+int main()
+{
+    
+    return 0;
+}
